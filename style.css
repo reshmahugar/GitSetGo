@@ -1,0 +1,135 @@
+.top-container{
+    background-color: #0D1117;
+    margin : 50px;
+
+    border-radius: 6px;
+    border-width: max(1px,0.0625rem);
+    border-style: solid;
+    border-color: #30363d;
+
+    height: 400px;
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+}
+
+h1 {
+    color: white;
+    margin-top: 0px;
+    font-size: 5.625rem;
+    font-family: Montserrat;
+}
+
+body{
+    background-color: #010409;
+    margin : 0px;
+    color: white;
+}
+
+
+.top-container h1{
+    position: relative;
+    top:20px;
+}
+
+.mid-container {
+  background-color: #010409;
+  margin: 50px;
+  padding: 10px;
+  border-radius: 6px;
+  border-width: max(1px, 0.0625rem);
+  border-style: solid;
+  border-color: #30363d;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.mid-container .Box {
+  background-color: #0D1117;
+  border-radius: 6px;
+  border-width: max(1px, 0.0625rem);
+  width: 200px;
+  height: 300px;
+  padding: 30px;
+  border-color: #30363d;
+  border-style: solid;
+  position: relative;
+  margin: 50px;
+  padding: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.mid-container .Box:hover{
+  transform:rotateY(180deg);
+  border-color:white;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+
+.mid-container .Box .Box-Back {
+  display: none; 
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+
+.mid-container .Box:hover .Box-Front {  
+  visibility: hidden; 
+}
+
+.mid-container .Box:hover .Box-Back {
+  display: flex; 
+  visibility: visible;
+
+}
+
+.mid-container .Box .Box-Front {
+  display: flex;
+  justify-content: center;
+  align-items:end;
+  transform: rotateY(0deg);
+}
+
+.mid-container .Box .Box-Back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg); 
+  position: absolute;
+  width: 90%;
+}
+
+.mid-container .Box .Box-Back p {
+
+  transform: rotateY(-360deg); 
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  position:absolute;
+}
+
+.mid-container .Box .Box-Front img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+.mid-container .Box .Box-Front,
+.mid-container .Box .Box-Back {
+  backface-visibility: hidden;
+}
+
+.mid-container .Box:hover h2 {
+  visibility:hidden;
+  color:red;
+}
